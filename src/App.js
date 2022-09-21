@@ -1,7 +1,7 @@
 import { Box} from "@mui/system";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "./components/Login/Login";
+import Login from "./components/LoginForm/LoginForm";
 import Main from "./components/Main"
 
 import "./App.css";
