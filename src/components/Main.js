@@ -1,7 +1,7 @@
-import { Box, Stack } from "@mui/system";
+import { Box, Stack } from '@mui/system';
 
-import Navbar from "./Navbar/Navbar";
-import Sidebar from "./Sidebar/Sidebar";
+import Navbar from './Navbar/Navbar';
+import Sidebar from './Sidebar/Sidebar';
 import RightBar from './Rightbar/Rightbar';
 import Feed from './Feed/Feed';
 import Add from './AddPost/AddPost';

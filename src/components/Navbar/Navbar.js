@@ -21,7 +21,7 @@ import './navbar.css';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector(state => state.user);
   const { name, avatarUrl } = currentUser;
 
   return (
@@ -46,14 +46,14 @@ const Navbar = () => {
               <NotificationsIcon />
             </Badge>
           </IconButton>
-          <IconButton color='inherit' onClick={(e) => setOpen(true)}>
+          <IconButton color='inherit' onClick={() => setOpen(true)}>
             <Avatar sx={{ width: 30, height: 30 }} alt={name} src={avatarUrl} />
           </IconButton>
         </Box>
         <IconButton
           sx={{ display: { xs: 'block', sm: 'none' } }}
           color='inherit'
-          onClick={(e) => setOpen(true)}
+          onClick={() => setOpen(true)}
         >
           <Avatar sx={{ width: 30, height: 30 }} alt={name} src={avatarUrl} />
           <Typography>Elena</Typography>
@@ -63,7 +63,7 @@ const Navbar = () => {
       <Menu
         id='simple-menu'
         open={open}
-        onClose={(e) => setOpen(false)}
+        onClose={() => setOpen(false)}
         anchorOrigin={{
           vertical: 'top',
           horizontal: 'right',

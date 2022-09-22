@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialPosts = [
   {
@@ -6,13 +6,9 @@ const initialPosts = [
     avatarUrl: 'https://material-ui.com/static/images/avatar/6.jpg',
     author: 'Jhon Doe',
     datePosted: 'Sept 22, 2022',
-    mainImageUrl:
-      'https://material-ui.com/static/images/image-list/breakfast.jpg',
-    description:
-      'A good breakfast fuels you up and gets you ready for the day. Good morning',
-    comments: [
-      { datePosted: new Date().toLocaleDateString(), text: 'Default comment' },
-    ],
+    mainImageUrl: 'https://material-ui.com/static/images/image-list/breakfast.jpg',
+    description: 'A good breakfast fuels you up and gets you ready for the day. Good morning',
+    comments: [{ datePosted: new Date().toLocaleDateString(), text: 'Default comment' }],
   },
   {
     id: 2,
@@ -44,7 +40,7 @@ export const postSlice = createSlice({
     },
     addComment: (state, action) => {
       const { postId, comment } = action.payload;
-      const postIndex = state.posts.findIndex((post) => post.id === postId);
+      const postIndex = state.posts.findIndex(post => post.id === postId);
 
       // add in start of array /
       state.posts[postIndex].comments.unshift(comment);

@@ -14,35 +14,15 @@ import Typography from '@mui/material/Typography';
 
 const RightBar = () => {
   return (
-    <Box
-      className='rightBoxStyle'
-      sx={{ display: { xs: 'none', sm: 'block' } }}
-      flex={2}
-      p={2}
-    >
+    <Box className='rightBoxStyle' sx={{ display: { xs: 'none', sm: 'block' } }} flex={2} p={2}>
       <Box position='fixed' width={300}>
         <Typography variant='h6'>Online Friends</Typography>
         <AvatarGroup max={7}>
-          <Avatar
-            alt='Remy Sharp'
-            src='https://material-ui.com/static/images/avatar/1.jpg'
-          />
-          <Avatar
-            alt='Travis Howard'
-            src='https://material-ui.com/static/images/avatar/5.jpg'
-          />
-          <Avatar
-            alt='Cindy Baker'
-            src='https://material-ui.com/static/images/avatar/4.jpg'
-          />
-          <Avatar
-            alt='Agnes Walker'
-            src='https://material-ui.com/static/images/avatar/7.jpg'
-          />
-          <Avatar
-            alt='Trevor Henderson'
-            src='https://material-ui.com/static/images/avatar/6.jpg'
-          />
+          <Avatar alt='Remy Sharp' src='https://material-ui.com/static/images/avatar/1.jpg' />
+          <Avatar alt='Travis Howard' src='https://material-ui.com/static/images/avatar/5.jpg' />
+          <Avatar alt='Cindy Baker' src='https://material-ui.com/static/images/avatar/4.jpg' />
+          <Avatar alt='Agnes Walker' src='https://material-ui.com/static/images/avatar/7.jpg' />
+          <Avatar alt='Trevor Henderson' src='https://material-ui.com/static/images/avatar/6.jpg' />
         </AvatarGroup>
         <Typography variant='h6' mt={2}>
           Latest Photos
@@ -74,20 +54,13 @@ const RightBar = () => {
         <List>
           <ListItem alignItems='flex-start'>
             <ListItemAvatar>
-              <Avatar
-                alt='Remy Sharp'
-                src='https://material-ui.com/static/images/avatar/7.jpg'
-              />
+              <Avatar alt='Remy Sharp' src='https://material-ui.com/static/images/avatar/7.jpg' />
             </ListItemAvatar>
             <ListItemText
               primary='Brunch this weekend?'
               secondary={
                 <React.Fragment>
-                  <Typography
-                    component='span'
-                    variant='body2'
-                    color='textPrimary'
-                  >
+                  <Typography component='span' variant='body2' color='textPrimary'>
                     Ali Connors
                   </Typography>
                   {" — I'll be in your neighborhood doing errands this…"}
@@ -107,11 +80,7 @@ const RightBar = () => {
               primary='Summer BBQ'
               secondary={
                 <React.Fragment>
-                  <Typography
-                    component='span'
-                    variant='body2'
-                    color='textPrimary'
-                  >
+                  <Typography component='span' variant='body2' color='textPrimary'>
                     to Scott, Alex, Jennifer
                   </Typography>
                   {" — Wish I could come, but I'm out of town this…"}
@@ -122,20 +91,13 @@ const RightBar = () => {
           <Divider variant='inset' component='li' />
           <ListItem alignItems='flex-start'>
             <ListItemAvatar>
-              <Avatar
-                alt='Cindy Baker'
-                src='https://material-ui.com/static/images/avatar/1.jpg'
-              />
+              <Avatar alt='Cindy Baker' src='https://material-ui.com/static/images/avatar/1.jpg' />
             </ListItemAvatar>
             <ListItemText
               primary='Oui Oui'
               secondary={
                 <React.Fragment>
-                  <Typography
-                    component='span'
-                    variant='body2'
-                    color='textPrimary'
-                  >
+                  <Typography component='span' variant='body2' color='textPrimary'>
                     Sandra Adams
                   </Typography>
                   {' — Do you have Paris recommendations? Have you ever…'}

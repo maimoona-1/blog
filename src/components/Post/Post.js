@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import React from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import Stack from '@mui/system/Stack';
 
@@ -27,15 +27,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Comments from './Comments';
 import { addComment } from './postSlice';
 
-const Post = ({
-  id,
-  avatarUrl,
-  author,
-  datePosted,
-  mainImageUrl,
-  description,
-  comments,
-}) => {
+const Post = ({ id, avatarUrl, author, datePosted, mainImageUrl, description, comments }) => {
   const dispatch = useDispatch();
   const [showComment, setShowComment] = useState(false);
   const [comment, setComment] = useState('');
@@ -72,12 +64,7 @@ const Post = ({
         title={author}
         subheader={datePosted}
       />
-      <CardMedia
-        component='img'
-        height='300'
-        src={mainImageUrl}
-        alt='blog image'
-      />
+      <CardMedia component='img' height='300' src={mainImageUrl} alt='blog image' />
       <CardContent>
         <Typography variant='body2' color='text.secondary'>
           {description}
@@ -85,11 +72,7 @@ const Post = ({
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label='add to favorites'>
-          <Checkbox
-            icon={<FavoriteBorder />}
-            checkedIcon={<Favorite />}
-            name='checkedH'
-          />
+          <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} name='checkedH' />
         </IconButton>
         <IconButton aria-label='share'>
           <ShareIcon />
@@ -130,11 +113,7 @@ const Post = ({
       )}
 
       {comments?.length > 0 && (
-        <Comments
-          comments={comments}
-          isExpanded={expanded}
-          setIsExpanded={setExpanded}
-        />
+        <Comments comments={comments} isExpanded={expanded} setIsExpanded={setExpanded} />
       )}
     </Card>
   );

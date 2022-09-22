@@ -34,9 +34,11 @@ const UserBox = styled(Box)({
   gap: 5,
 });
 
+const MIN_URL_LENGTH = 5;
+
 const Add = () => {
   const dispatch = useDispatch();
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector(state => state.user);
   const { name, avatarUrl } = currentUser;
 
   const [open, setOpen] = useState(false);
@@ -61,23 +63,18 @@ const Add = () => {
     setOpen(false);
   };
 
-  const isDisabled =
-    description.trim().length < 1 || blogImageUrl.trim().length < 5;
+  const isDisabled = description.trim().length < 1 || blogImageUrl.trim().length < MIN_URL_LENGTH;
 
   return (
     <>
-      <Tooltip
-        title='Add'
-        onClick={() => setOpen(true)}
-        sx={{ position: 'fixed', bottom: 20 }}
-      >
+      <Tooltip title='Add' onClick={() => setOpen(true)} sx={{ position: 'fixed', bottom: 20 }}>
         <Fab color='primary'>
           <PostAddOutlined />
         </Fab>
       </Tooltip>
       <StyledModal
         open={open}
-        onClose={(e) => setOpen(false)}
+        onClose={() => setOpen(false)}
         aria-labelledby='simple-modal-title'
         aria-describedby='simple-modal-description'
       >
@@ -92,11 +89,7 @@ const Add = () => {
             </Typography>
           </UserBox>
           {blogImageUrl && (
-            <img
-              src={blogImageUrl}
-              alt='main'
-              style={{ width: '300px', height: '200px' }}
-            />
+            <img src={blogImageUrl} alt='main' style={{ width: '300px', height: '200px' }} />
           )}
           <TextField
             sx={{ width: '100%' }}
@@ -120,12 +113,7 @@ const Add = () => {
             <PersonAddIcon color='error' />
             <VideocamIcon color='success' />
           </Stack>
-          <ButtonGroup
-            disabled={isDisabled}
-            variant='contained'
-            color='primary'
-            fullWidth
-          >
+          <ButtonGroup disabled={isDisabled} variant='contained' color='primary' fullWidth>
             <Button onClick={handleCreatePost}>Post</Button>
             <Button sx={{ width: '100px' }}>
               <DateRangeIcon />

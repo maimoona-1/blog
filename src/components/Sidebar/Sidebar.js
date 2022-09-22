@@ -1,13 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import {
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Switch,
-} from '@mui/material';
+import { List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import PagesIcon from '@mui/icons-material/Pages';
 import GroupIcon from '@mui/icons-material/Group';
@@ -19,12 +12,7 @@ import Brightness2Icon from '@mui/icons-material/Brightness2';
 
 const Sidebar = ({ mode, setMode }) => {
   return (
-    <Box
-      className='sideBoxStyle'
-      sx={{ display: { xs: 'none', sm: 'block' } }}
-      flex={1}
-      p={2}
-    >
+    <Box className='sideBoxStyle' sx={{ display: { xs: 'none', sm: 'block' } }} flex={1} p={2}>
       <Box position='fixed'>
         <List>
           <ListItem disablePadding>
@@ -88,9 +76,7 @@ const Sidebar = ({ mode, setMode }) => {
               <ListItemIcon>
                 <Brightness2Icon />
               </ListItemIcon>
-              <Switch
-                onChange={(e) => setMode(mode === 'light' ? 'dark' : 'light')}
-              />
+              <Switch onChange={() => setMode(mode === 'light' ? 'dark' : 'light')} />
             </ListItemButton>
           </ListItem>
         </List>

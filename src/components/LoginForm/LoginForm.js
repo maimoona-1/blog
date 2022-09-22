@@ -25,11 +25,7 @@ const Login = () => {
             </Avatar>
             <h2>Sign In</h2>
           </Grid>
-          <TextField
-            label='User Name*'
-            placeholder='Enter your email or user name'
-            fullWidth
-          />
+          <TextField label='User Name*' placeholder='Enter your email or user name' fullWidth />
           <TextField
             label='Password*'
             placeholder='Enter your password'

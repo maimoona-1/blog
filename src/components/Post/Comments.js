@@ -12,10 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Comments = ({ comments, isExpanded, setIsExpanded }) => {
   return (
-    <Accordion
-      expanded={isExpanded}
-      onChange={() => setIsExpanded((prev) => !prev)}
-    >
+    <Accordion expanded={isExpanded} onChange={() => setIsExpanded(prev => !prev)}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls='panel1a-content'
@@ -24,7 +21,7 @@ const Comments = ({ comments, isExpanded, setIsExpanded }) => {
         <Typography>{comments.length} Comment/s</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        {comments.map((comment) => {
+        {comments.map(comment => {
           return (
             <Box key={comment.datePosted}>
               <Typography>{comment.text}</Typography>
